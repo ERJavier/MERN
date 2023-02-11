@@ -1,4 +1,3 @@
-import { timeStamp } from "console";
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
@@ -30,7 +29,7 @@ const UserSchema = new mongoose.Schema({
     default: "",
   },
   friends: {
-    type: array,
+    type: Array,
     default: []
   },
   location: String,
