@@ -13,7 +13,7 @@ export const createPost = async (req, res) => {
             lastName: user.lastName,
             location: user.location,
             description,
-            userPicturePath: user.PicturePath,
+            userPicturePath: user.picturePath,
             picturePath,
             likes: {},
             comments: []
@@ -32,7 +32,7 @@ export const createPost = async (req, res) => {
 
 // READ 
 
-export const getFeedPost = async (req, res) => {
+export const getFeedPosts = async (req, res) => {
     try {
         const post = await Post.find();
         res.status(201).json(post);
@@ -54,7 +54,7 @@ export const getUserPosts = async (req, res) => {
 
 // UPDATE 
 
-export const likePost = async (req, res) => {
+export const likePosts = async (req, res) => {
     try {
         const { id } = req.params;
         const { userId } = req.body;

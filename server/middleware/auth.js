@@ -1,4 +1,4 @@
-import { Jwt } from "jsonwebtoken";
+import Jwt from "jsonwebtoken";
 
 export const verifyToken = async (res, req, next) => {
     try {
