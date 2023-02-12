@@ -124,8 +124,16 @@ const Navbar = () => {
             </Box>
 
             {/* MENU ITEM */}
-            <FlexBetween gap="2rem">
-              <IconButton onClick={() => dispatch(setMode())}>
+            <FlexBetween 
+                display="flex" 
+                flexDirection="column" 
+                justifyContent="center" 
+                gap="3rem"
+            >
+              <IconButton 
+                onClick={() => dispatch(setMode())}
+                sx={{ fontSize: "25px"}}    
+            >
                 {theme.palette.mode === "dark" ? (
                   <DarkMode sx={{ fontSize: "25px" }} />
                 ) : (
@@ -138,7 +146,7 @@ const Navbar = () => {
               <FormControl variant="standard" value={fullName}>
                 <Select
                   value={fullName}
-                  sx={{
+                  sx={{ 
                     backgroundColor: neutralLight,
                     width: "150px",
                     borderRadius: "0.25rem",
