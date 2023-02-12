@@ -1,6 +1,25 @@
 import { useState } from "react";
-import { Box, IconButton, InputBase, Typography, Select, MenuItem, FormControl, useTheme, useMediaQuery } from "@mui/system";
-import { Search, Message, DarkMode, LightMode, Notifications, Help, Menu, Close } from "@mui/icons-material"
+import {
+  Box,
+  IconButton,
+  InputBase,
+  Typography,
+  Select,
+  MenuItem,
+  FormControl,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import {
+  Search,
+  Message,
+  DarkMode,
+  LightMode,
+  Notifications,
+  Help,
+  Menu,
+  Close,
+} from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
@@ -21,7 +40,7 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt;
 
-    const fullName = `${user.firstName} ${user.lastName}`;
+    const fullName = "javier cepeda " ;//`${user.firstName} ${user.lastName}`;
 
 
     return (
