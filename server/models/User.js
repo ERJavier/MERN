@@ -37,7 +37,7 @@ const UserSchema = new mongoose.Schema({
   viewedPorfile: Number,
   impressions: Number
 },
-    { timeStamp: true }
+    { timestamp: true }
 );
 
 const User = mongoose.model("User", UserSchema);
