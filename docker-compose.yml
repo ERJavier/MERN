@@ -1,0 +1,22 @@
+version: "3"
+services:
+  server:
+    image: server
+    env_file:
+      - server/.env
+    build: ./server
+    ports:
+      - "3001:3001"
+    networks:
+      - mern-app
+
+  client:
+    build: ./client
+    ports:
+      - "8080:80"
+    networks:
+      - mern-app
+
+networks:
+  mern-app:
+    driver: bridge
